@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -45,7 +45,7 @@
     <label>Last Name</label>
     <input type="text" name="lastname" value="<%= user ? user.get('lastname') : '' %>" />
     <label>E Mail</label>
-    <input type="text" name="age" value="<%= user ? user.get('age') : '' %>" />
+    <input type="text" name="age" value="<%= user ? user.get('email') : '' %>" />
     <hr />
     
     <button type="submit" class="btn">Create</button>
@@ -61,4 +61,49 @@
 <script src="/js/backbone-min.js"></script>
 <script src="/js/app.js"></script>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+ 
+    <head>
+      <meta charset="utf-8" />
+      <title>BACKBONE CRUD</title>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+      <script src="/js/app.js"></script>
+    </head>
+ 
+    <body>
+      <div id="page"></div>
+      <div id="newUser">
+        <form action="">
+          <input type="text" placeholder="First Name" class="firstname" >
+          <input type="text" placeholder="Last Name" class="lastname" >
+          <input type="text" placeholder="Email" class="email" >
+          <input type="submit" value="Create User">
+        </form>
+      </div>
+
+    
+      <script id="userItemTemplate" type="text/template">
+          <h2><a href="#/edit/<%= 'a' %>"><%= firstname %><%= lastname %></a></h2>
+          <p>
+              <%= email %>
+              <span><input type="button" class="edit" value="Edit" /></span>
+              <span><input type="button" class="delete" value="Delete" /></span>
+          </p>
+      </script>
+      <script id="tweetItemTemplate" type="text/template">
+          <h2><a href="#/edit/<%= 'a' %>"><%= firstname %><%= lastname %></a></h2>
+          <p>
+              <%= email %>
+              <span><input type="button" class="edit" value="Edit" /></span>
+              <span><input type="button" class="delete" value="Delete" /></span>
+          </p>
+      </script>
+  </body>
 </html>
+
